@@ -1,9 +1,14 @@
 <?php
 class Person extends CI_Model {
+    function update($data, $id) {
+        $this->db->where('id', $id);
+        $this->db->update('person', $data);
+    }
+    
+    
     function insert($data) {
         $this->db->insert('person', $data);
     }
-    
     
     function getAll() {
         $this->load->database(); // manually load library database

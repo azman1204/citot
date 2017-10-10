@@ -6,6 +6,11 @@ class Sample extends CI_Controller {
         $this->load->model('Person');
     }
     
+    function update() {
+        $data = ['address' => 'Cyber Jaya'];
+        $this->Person->update($data, $id=4);
+    }
+    
     //http://localhost/citot/index.php/sample/insert
     function insert() {
         $data = [
