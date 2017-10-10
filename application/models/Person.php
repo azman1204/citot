@@ -1,8 +1,15 @@
 <?php
 class Person extends CI_Model {
+    function remove($id) {
+        $this->db->delete('person', "id = $id");
+    }
+    
     function update($data, $id) {
-        $this->db->where('id', $id);
-        $this->db->update('person', $data);
+        //$this->db->set($data);
+        //$this->db->where('id', $id);
+        //$this->db->update('person', $data);
+        //method chaining
+        $this->db->where('id', $id)->update('person', $data);
     }
     
     

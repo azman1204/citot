@@ -5,6 +5,10 @@ class Sample extends CI_Controller {
         parent::__construct();
         $this->load->model('Person');
     }
+    // http://localhost/citot/index.php/sample/delete/1
+    function delete($id) {
+        $this->Person->remove($id);
+    }
     
     function update() {
         $data = ['address' => 'Cyber Jaya'];
