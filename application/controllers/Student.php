@@ -1,13 +1,38 @@
 <?php
 class Student extends CI_Controller {
+    function __construct() {
+        parent::__construct();
+        $this->load->model('Student_model', 'stud');
+    }
+    
+    function edit($id) {
+        $data['student'] = $this->stud->one($id);
+        //var_dump($data['student']);exit;
+        $data['v'] = 'student/form';
+        $this->load->view('layout', $data);
+    }
+    
+    function del($id) {
+        $this->stud->remove($id);
+        redirect('student/listing');
+    }
+    
     function save() {
         // input - obj auto load. guna utk baca val dr form
         //echo $this->input->post('name');
         //var_dump($this->input->post());
         $data = $this->input->post(); // return data dlm bentuk assoc. array
-        $this->load->model('Student_model', 'stud'); // rename model
-        $this->stud->insert($data);
-        redirect('sudent/listing');
+        $id = $this->input->post('id');
+        if ($id === '') {
+            // insert
+            $this->stud->insert($data);
+        } else {
+            // update
+            $this->stud->update($data, $id);
+        }
+        
+        //$this->load->model('Student_model', 'stud'); // rename model
+        redirect('student/listing');
     }
     
     function form() {

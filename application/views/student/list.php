@@ -16,7 +16,14 @@
         <td><?= $bil++ ?>.</td>
         <td><?= $stu->name ?></td>
         <td><?= $stu->email ?></td>
-        <td></td>
+        <td>
+            <a href="<?= site_url('student/del/'.$stu->id) ?>" onclick="return confirm('Are you sure ?')">
+                <span class="glyphicon glyphicon-trash"></span>
+            </a>
+            <a href="<?= site_url('student/edit/'.$stu->id) ?>">
+                <span class="glyphicon glyphicon-pencil"></span>
+            </a>
+        </td>
     </tr>
     <?php } ?>
 </table>
