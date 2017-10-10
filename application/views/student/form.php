@@ -1,3 +1,6 @@
+
+<?= validation_errors() ?>
+
 <form method="post" action="<?= site_url('student/save') ?>">
     <input type="hidden" name="id" value="<?= $student->id ?>">
     Name      : <input type="text" name="name" value="<?= $student->name ?>">
