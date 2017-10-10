@@ -37,6 +37,7 @@ class Student extends CI_Controller {
     
     function form() {
         $data['v'] = 'student/form'; // /views/student/form.php
+        $data['student'] = $this->stud;
         $this->load->view('layout', $data);
     }
     

@@ -1,5 +1,16 @@
 <?php
 class Student_model extends CI_Model {
+    var $id;
+    var $name;
+    var $email;
+    var $matric_no;
+    
+    function update($data, $id) {
+        $this->db
+                ->where('id', $id)
+                ->update('student', $data);
+    }
+    
     function one($id) {
         // return an object represent a record
         return $this->db
