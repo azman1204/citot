@@ -1,4 +1,10 @@
 <legend>Login Screen</legend>
+<?php
+if (isset($err)) {
+    echo "<div class='alert alert-danger'>$err</div>";
+}
+?>
+<form method="post" action="<?= site_url('main/login/enter') ?>">
 <div class="col-md-6 well">
     <div class="row">
         <div class="col-md-12">User ID</div>
@@ -19,3 +25,4 @@
         </div>
     </div>
 </div>
+</form>
