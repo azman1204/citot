@@ -7,7 +7,7 @@ class MY_Controller extends CI_Controller {
         if (!$this->session->userdata('logged_in')) {
             redirect('main/login/index');
         }
-    }
+    } 
     
     // $data['v'] = 'main/home'
     // $this->load->view('layout', $data)
