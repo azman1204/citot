@@ -1,0 +1,22 @@
+Library vs Helper
+- library = class
+- helper  = function
+
+What we can do
+1. create own library
+2. extends existing library
+3. replace 
+
+$this->load->library('form_validation')
+$this->load->view('nama view')
+$this->load->database()
+$this->load->model()
+$this->load->helper()
+
+JSON = Js obj notation
+- about format data
+- XML <nama>azman</nama>
+- {"nama" : "azman"}
+
+RESTful
+- http, get, post, put, delete, ??

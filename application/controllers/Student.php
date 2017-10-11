@@ -36,6 +36,7 @@ class Student extends CI_Controller {
             $this->stud->name      = $data['name'];
             $this->stud->email     = $data['email'];
             $this->stud->matric_no = $data['matric_no'];
+            $this->stud->id        = $data['id'];
             $dat['student'] = $this->stud;
             $this->load->view('layout', $dat);
             return;
