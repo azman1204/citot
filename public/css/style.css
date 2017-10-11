@@ -1,0 +1,24 @@
+#xwrapper {
+    border: 2px solid green;
+}
+
+#xheader {
+    height: 50px;
+    background-color: yellow;
+}
+
+#xmenu {
+    height: 20px;
+    background-color: yellowgreen;
+}
+
+#xcontent {
+    min-height: 400px;
+}
+
+#xfooter {
+    height: 20px;
+    background-color: yellowgreen;
+}
+
+

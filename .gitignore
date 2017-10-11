@@ -2,5 +2,5 @@ user_guide/*
 system/*
 license.txt
 readme.rst
-public/*
 public/bootstrap/*
+nbproject/*
