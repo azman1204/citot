@@ -9,7 +9,10 @@ class MY_Controller extends CI_Controller {
         }
     }
     
-    function viewit($arr = []) {
+    // $data['v'] = 'main/home'
+    // $this->load->view('layout', $data)
+    function viewit($v, $arr = []) {
+        $arr['v'] = $v;
         $this->load->view('layout', $arr);
     }
 }

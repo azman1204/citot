@@ -12,6 +12,7 @@ class Login extends CI_Controller {
         if ($ok) {
             // set session $_SESSION['key'] = 'value'; (php biasa)
             $this->session->set_userdata('logged_in', true); 
+            $this->session->set_userdata('userid', $input['userid']); 
             redirect('student/listing');
         } else {
             // show back login screen

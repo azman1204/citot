@@ -8,7 +8,10 @@
     <body>
         <div id="xwrapper" class="container">
             <div id="xheader" style="font-size: 38px;">Codeigniter 3 Tutorial</div>
-            <div id="xmenu">Home | About | Login</div>
+            <div id="xmenu">
+                Home | 
+                About | 
+                <a href="<?= site_url('main/login/logout') ?>">Logout</a></div>
             <div id="xcontent"><?php $this->load->view($v) ?></div>
             <div id="xfooter"></div>
         </div>
