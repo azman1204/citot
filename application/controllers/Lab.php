@@ -2,9 +2,14 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class Lab extends CI_Controller {
+class Lab extends MY_Controller {
     function __construct() {
         parent::__construct();
+    }
+    
+    function test() {
+        $data['v'] = 'lab/test';
+        $this->viewit($data);
     }
     
     function lib() {
