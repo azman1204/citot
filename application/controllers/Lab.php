@@ -7,6 +7,11 @@ class Lab extends MY_Controller {
         parent::__construct();
     }
     
+    // generate password using bcrypt algo
+    function genpwd() {
+        echo password_hash("123", PASSWORD_BCRYPT);
+    }
+    
     function test() {
         $data['v'] = 'lab/test';
         $this->viewit($data);
